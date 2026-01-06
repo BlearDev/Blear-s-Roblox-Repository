@@ -1,9 +1,9 @@
 --!strict
 
 function GetAveragePositionOfPlayers( Players : SharedTable )
-	local MinX, MaxX = math.huge, -math.huge
-	local MinY, MaxY = math.huge, -math.huge
-	local MinZ, MaxZ = math.huge, -math.huge
+	local MinX : number, MaxX : number = math.huge, -math.huge
+	local MinY : number, MaxY : number = math.huge, -math.huge
+	local MinZ : number, MaxZ : number = math.huge, -math.huge
 	
 	for Index = 1, #Players, 1 do
 		
