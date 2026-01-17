@@ -1,14 +1,14 @@
 --!strict
 
-function GetAveragePositionOfPlayers( Players : SharedTable )
+function GetAveragePositionOfPlayers( Players : { Player } ) : Vector3
 	local MinX : number, MaxX : number = math.huge, -math.huge
 	local MinY : number, MaxY : number = math.huge, -math.huge
 	local MinZ : number, MaxZ : number = math.huge, -math.huge
 	
 	for Index = 1, #Players, 1 do
 		
-		if Players[Index].Character then
-			local CurrentPosition : Vector3 = Players[Index].Character:GetPivot().Position
+		if Players[ Index ].Character then
+			local CurrentPosition : Vector3 = Players[ Index ].Character:GetPivot().Position
 			
 			-- Min
 			if CurrentPosition.X < MinX then MinX = CurrentPosition.X end
