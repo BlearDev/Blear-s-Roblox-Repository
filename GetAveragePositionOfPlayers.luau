@@ -7,8 +7,10 @@ function GetAveragePositionOfPlayers( Players : { Player } ) : Vector3
 	
 	for Index = 1, #Players, 1 do
 		
-		if Players[ Index ].Character then
-			local CurrentPosition : Vector3 = Players[ Index ].Character:GetPivot().Position
+		local Character = Players[ Index ].Character
+		
+		if Character then
+			local CurrentPosition : Vector3 = Character:GetPivot().Position
 			
 			-- Min
 			if CurrentPosition.X < MinX then MinX = CurrentPosition.X end
